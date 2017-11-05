@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20171102171703) do
   enable_extension "plpgsql"
 
   create_table "restaurants", force: :cascade do |t|
-    t.string "name"
+    t.string "name", limit: 60, null: false
     t.integer "cuisine"
-    t.decimal "rating"
-    t.boolean "is_10_bis"
-    t.string "address"
+    t.decimal "rating", precision: 2
+    t.boolean "is_10_bis", default: false
+    t.string "address", null: false
     t.integer "max_deliver_in_min"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

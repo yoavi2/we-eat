@@ -1,11 +1,11 @@
 class CreateRestaurants < ActiveRecord::Migration[5.1]
   def change
     create_table :restaurants do |t|
-      t.string :name
+      t.string :name, null: false, limit: 60
       t.integer :cuisine
-      t.decimal :rating
-      t.boolean :is_10_bis
-      t.string :address
+      t.decimal :rating, precision: 2
+      t.boolean :is_10_bis, default: false
+      t.string :address, null: false
       t.integer :max_deliver_in_min
 
       t.timestamps

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20171102171703) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name", limit: 60, null: false
-    t.integer "cuisine"
+    t.string "cuisine"
     t.decimal "rating", precision: 2
     t.boolean "is_10_bis", default: false
     t.string "address", null: false

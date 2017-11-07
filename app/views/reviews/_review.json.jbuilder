@@ -1,2 +1,2 @@
-json.extract! review, :id, :created_at, :updated_at
+json.extract! review, :id, :reviewer_name, :rating, :comment
 json.url review_url(review, format: :json)

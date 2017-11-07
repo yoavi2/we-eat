@@ -10,7 +10,9 @@ class ReviewsController < ApplicationController
 
   # GET restaurant/1/reviews/1
   # GET restaurant/1/reviews/1.json
-  def show; end
+  def show
+    puts "YOAV: #{params.inspect}"
+  end
 
   # GET restaurant/1/reviews/new
   def new
@@ -18,8 +20,9 @@ class ReviewsController < ApplicationController
   end
 
   # GET restaurant/1/reviews/1/edit
-  def edit; end
-
+  def edit
+  end
+  # 
   # POST restaurant/1/reviews
   # POST restaurant/1/reviews.json
   def create

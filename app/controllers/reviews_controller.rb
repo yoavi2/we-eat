@@ -11,7 +11,6 @@ class ReviewsController < ApplicationController
   # GET restaurant/1/reviews/1
   # GET restaurant/1/reviews/1.json
   def show
-    puts "YOAV: #{params.inspect}"
   end
 
   # GET restaurant/1/reviews/new

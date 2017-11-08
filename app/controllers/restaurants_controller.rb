@@ -13,7 +13,8 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1
   # GET /restaurants/1.json
-  def show; end
+  def show
+  end
 
   # GET /restaurants/new
   def new
@@ -21,7 +22,8 @@ class RestaurantsController < ApplicationController
   end
 
   # GET /restaurants/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /restaurants
   # POST /restaurants.json

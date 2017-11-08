@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
   # GET restaurant/1/reviews/1/edit
   def edit
   end
-  # 
+  #
   # POST restaurant/1/reviews
   # POST restaurant/1/reviews.json
   def create
@@ -30,7 +30,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       if @review.save
         # format.html { redirect_to restaurant_review_path(@restaurant), notice: 'Review was successfully created.' }
-        format.json { render :show, status: :created, location: @review }
+        format.json { render :show, status: :created, location: [@restaurant, @review] }
       else
         # format.html { render :new }
         format.json { render json: @review.errors, status: :unprocessable_entity }
@@ -44,7 +44,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       if @review.update(review_params)
         # format.html { redirect_to @review, notice: 'Review was successfully updated.' }
-        format.json { render :show, status: :ok, location: @review }
+        format.json { render :show, status: :ok, location: [@restaurant, @review] }
       else
         # format.html { render :edit }
         format.json { render json: @review.errors, status: :unprocessable_entity }

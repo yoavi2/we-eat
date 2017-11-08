@@ -37,7 +37,7 @@ class Restaurant < ApplicationRecord
     all # FIXME: Horrible, should use single select query
       .reject {|r| r.rating.blank?}
       .select {|r|
-        r.rating >= min_rating.to_f
+        r.rating >= min_rating.to_f # FIXME: Should really check if numeric before...
       }
   }
 

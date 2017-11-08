@@ -5,11 +5,28 @@ class Restaurant < ApplicationRecord
 
   # Validations
   validates :name, :address, presence: true
-  validates :rating, default: nil
 
-  # Filters
-  scope :is_10_bis, ->(is_10_bis) {
-    where is_10_bis: is_10_bis
+  # Calculated fields
+  def rating
+    if reviews.present?
+      reviews.average(:rating)
+    else
+      nil
+    end
+  end
+
+  # Filtered
+  def with_rating
+    reviews.reject {|r| r.rating.blank?}
+  end
+
+  def no_rating
+    reviews.reject {|r| r.rating.present?}
+  end
+
+  # API filters
+  scope :ten_bis, ->(is_10_bis) {
+    where(is_10_bis: is_10_bis)
   }
 
   scope :max_deliver_in_min, ->(max_deliver_in_min) {
@@ -17,12 +34,30 @@ class Restaurant < ApplicationRecord
   }
 
   scope :min_rating, ->(min_rating) {
-    where('rating >= ?', min_rating)
+    all # FIXME: Horrible, should use single select query
+      .reject {|r| r.rating.blank?}
+      .select {|r|
+        r.rating >= min_rating.to_f
+      }
   }
 
   scope :search, ->(param) {
     where('lower(name) like :param OR lower(address) like :param OR lower(cuisine) like :param',
           param: "%#{param}%")
+  }
+
+  scope :shortest, ->(param) {
+    if param == 'true'
+      order(:max_deliver_in_min)
+    end
+  }
+
+  scope :best, ->(param) {
+    if param == 'true' # FIXME: Horrible, should use single select query
+      res_with_rating = all.reject {|r| r.rating.blank?}
+                            .sort_by(&:rating).reverse!
+      res_with_rating + all.reject {|r| r.rating.present?}
+    end
   }
 
 end

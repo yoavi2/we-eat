@@ -27,7 +27,6 @@ RSpec.describe 'Restaurants API', type: :request do
 
     context 'when the record exists' do
       it 'returns the restaurant' do
-        puts json
         expect(json).not_to be_empty
         expect(json['id']).to eq(restaurant_id)
       end

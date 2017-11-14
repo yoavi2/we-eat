@@ -55,8 +55,6 @@ export const loadRestaurants = () => {
 
     fetch(`${RESTAURANTS_URL}?${queryParams}`).then(response => response.json())
       .then(restaurants => dispatch(updateRestaurants(restaurants)));
-    // const restaurants = await response.json();
-    // dispatch(updateRestaurants(restaurants));
   };
 };
 

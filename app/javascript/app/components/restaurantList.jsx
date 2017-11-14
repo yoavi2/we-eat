@@ -11,13 +11,13 @@ class RestaurantList extends React.Component {
 
   render() {
     return (
-      <ul>
+      <div className="restaurant-list">
         {this.props.restaurants.map(restaurant => (
           <Restaurant
             key={restaurant.id} restaurant={restaurant} />
             // onClick={() => onRestaurantClick(restaurant.id)} /> // TODO: Implemnt a click later on
         ))}
-      </ul>
+      </div>
     );
   }
 }

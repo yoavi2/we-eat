@@ -1,12 +1,15 @@
 import React from 'react';
 import restaurantPropType from '../propTypes/restaurant';
+import Rating from './rating';
 
 const Restaurant = ({ restaurant }) => (
-  <li
+  <div
+    className="restaurant-item"
     // onClick={onClick}
   >
-    {restaurant.name}
-  </li>
+    <h2> {restaurant.name} </h2>
+    <Rating rating={restaurant.rating} maxRating={3} />
+  </div>
 );
 
 Restaurant.propTypes = {

@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Restaurant from 'restaurant';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as Actions from '../actions';
-
+import Restaurant from './restaurant';
+import restaurantPropType from '../propTypes/restaurant';
 
 class RestaurantList extends React.Component {
   constructor(props) {
@@ -23,25 +20,12 @@ class RestaurantList extends React.Component {
       </ul>
     );
   }
-
-
 }
 
 RestaurantList.propTypes = {
   restaurants: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    }),
+    restaurantPropType
   ),
 };
 
-const mapStateToProps = (state) => ({
-  restaurants: state.restaurants,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(Actions, dispatch),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantList);
-
+export default RestaurantList;

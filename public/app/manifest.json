@@ -1,4 +1,16 @@
 {
-  "app.js": "/app/app-500bf77d0973381a9ec5.js",
-  "application.js": "/app/application-e936ccff9123759535ff.js"
+  "actions/index.js": "/app/actions/index-645c7192e6c99fa2137c.js",
+  "actions/restaurantActions.js": "/app/actions/restaurantActions-645c7192e6c99fa2137c.js",
+  "application.js": "/app/application-645c7192e6c99fa2137c.js",
+  "components/app.js": "/app/components/app-645c7192e6c99fa2137c.js",
+  "components/filters.js": "/app/components/filters-645c7192e6c99fa2137c.js",
+  "components/map.js": "/app/components/map-645c7192e6c99fa2137c.js",
+  "components/restaurant.js": "/app/components/restaurant-645c7192e6c99fa2137c.js",
+  "components/restaurantList.js": "/app/components/restaurantList-645c7192e6c99fa2137c.js",
+  "components/review.js": "/app/components/review-645c7192e6c99fa2137c.js",
+  "mainApp.js": "/app/mainApp-645c7192e6c99fa2137c.js",
+  "propTypes/restaurant.js": "/app/propTypes/restaurant-645c7192e6c99fa2137c.js",
+  "reducers/index.js": "/app/reducers/index-645c7192e6c99fa2137c.js",
+  "reducers/restaurantFilter.js": "/app/reducers/restaurantFilter-645c7192e6c99fa2137c.js",
+  "store/index.js": "/app/store/index-645c7192e6c99fa2137c.js"
 }

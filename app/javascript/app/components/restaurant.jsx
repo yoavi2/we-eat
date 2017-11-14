@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import restaurantPropType from '../propTypes/restaurant';
 
 const Restaurant = ({ restaurant }) => (
   <li
@@ -7,13 +7,11 @@ const Restaurant = ({ restaurant }) => (
   >
     {restaurant.name}
   </li>
-)
+);
 
 Restaurant.propTypes = {
-  // onClick: PropTypes.func.isRequired,
-  restaurant: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }),
+  // onClick: PropTypes.func,
+  restaurant: restaurantPropType,
 };
 
 export default Restaurant;

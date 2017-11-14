@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import App from './components';
+import App from './components/app';
 import store from './store';
 
 class MainApp extends React.Component {

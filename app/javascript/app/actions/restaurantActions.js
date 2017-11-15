@@ -50,6 +50,7 @@ export const loadRestaurants = () => {
       'min_rating': minRating,
       'max_deliver_in_min': maxDeliverInMin,
       'search': searchQuery,
+      'best': true,
     };
     const queryParams = queryString.stringify(filters);
 

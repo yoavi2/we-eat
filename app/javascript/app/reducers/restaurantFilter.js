@@ -12,7 +12,7 @@ const initialState = {
   isTenBis: undefined,
   cuisine: undefined,
   minRating: undefined,
-  maxDeliveryInMins: 30,
+  maxDeliverInMin: 40,
   searchQuery: undefined,
   restaurants: [],
 };
@@ -37,7 +37,7 @@ const restaurantReducer = (state = initialState, action) => {
     case UPDATE_MAX_DELIVER_IN_MIN_FILTER:
       return {
         ...state,
-        maxDeliveryInMins: action.maxDeliveryInMins,
+        maxDeliverInMin: action.maxDeliverInMin,
       };
     case UPDATE_SEARCH_FILTER:
       return {

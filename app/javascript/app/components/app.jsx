@@ -1,18 +1,26 @@
 import React from 'react';
 import RestaurantList from './restaurantList';
+import Search from './search';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions';
+import Filters from './filters';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.props.actions.loadRestaurants();
+
   }
+
 
   render() {
     return (
-      <RestaurantList restaurants={this.props.restaurants}/>
+      <div>
+        <Search />
+        <Filters />
+        <RestaurantList restaurants={this.props.restaurants}/>
+      </div>
     );
   }
 }

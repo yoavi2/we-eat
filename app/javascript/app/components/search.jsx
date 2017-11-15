@@ -1,7 +1,7 @@
 import React from 'react';
-import FilterForm from '../forms/filtersForm';
+import SearchForm from '../forms/searchForm';
 
-class Filters extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -9,10 +9,10 @@ class Filters extends React.Component {
   render() {
     return (
       <div className="forms">
-        <FilterForm />
+        <SearchForm debounceTimeout={300} />
       </div>
     );
   }
 }
 
-export default Filters;
+export default Search;

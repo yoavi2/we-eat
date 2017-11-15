@@ -15,7 +15,7 @@ class RestaurantList extends React.Component {
         {this.props.restaurants.map(restaurant => (
           <Restaurant
             key={restaurant.id} restaurant={restaurant} />
-            // onClick={() => onRestaurantClick(restaurant.id)} /> // TODO: Implemnt a click later on
+            // onClick={() => onRestaurantClick(restaurant.id)} /> // TODO: Implement a click later on
         ))}
       </div>
     );

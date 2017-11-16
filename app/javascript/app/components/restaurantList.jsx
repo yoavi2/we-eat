@@ -11,7 +11,7 @@ class RestaurantList extends React.Component {
 
   render() {
     return (
-      <div className="restaurant-list">
+      <div className="content-drawer restaurant-list">
         {this.props.restaurants.map(restaurant => (
           <Restaurant
             key={restaurant.id} restaurant={restaurant} />

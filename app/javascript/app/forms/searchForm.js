@@ -6,12 +6,13 @@ let SearchForm = (props) => {
 
   const renderDebounceInput = (field) => {
     return (<DebounceInput debounceTimeout={props.debounceTimeout}
+                           minLength={2}
                            onChange={field.input.onChange}/>);
   };
 
   return (
     <div>
-      <label> Search
+      <label> Search:
         <Field
           name="searchQuery"
           component={renderDebounceInput}

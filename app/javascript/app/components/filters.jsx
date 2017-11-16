@@ -8,7 +8,7 @@ class Filters extends React.Component {
 
   render() {
     return (
-      <div className="forms">
+      <div>
         <FilterForm />
       </div>
     );

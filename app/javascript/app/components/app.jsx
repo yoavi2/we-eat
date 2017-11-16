@@ -1,10 +1,11 @@
 import React from 'react';
-import RestaurantList from './restaurantList';
-import Search from './search';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions';
 import Filters from './filters';
+import Header from './header';
+import Content from './content';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -17,10 +18,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Search />
+      <div className="app">
+        <Header />
         <Filters />
-        <RestaurantList restaurants={this.props.restaurants}/>
+        <Content restaurants={this.props.restaurants} />
       </div>
     );
   }

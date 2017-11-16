@@ -2,6 +2,7 @@ import React from 'react';
 import restaurantPropType from '../propTypes/restaurant';
 import Rating from './rating';
 import TenBisIcon from './tenBisIcon';
+import CuisineConverter from './cuisineConverter';
 
 const Restaurant = ({ restaurant }) => (
   <div
@@ -10,6 +11,7 @@ const Restaurant = ({ restaurant }) => (
   >
     <div className="restaurant-cuisine">
       <div className="cuisine-icon">
+        <CuisineConverter cuisine={this.props.object.cuisine}/>
       </div>
     </div>
     <div className="restaurant-info">

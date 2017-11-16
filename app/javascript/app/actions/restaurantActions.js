@@ -12,13 +12,25 @@ export const updateRestaurants = (restaurants) => ({
 
 export const loadRestaurants = () => {
   return (dispatch, getState) => {
-    console.log(getState());
-    const { form } = getState();
-    console.log(form);
 
+    const { form } = getState();
     const { search, filters } = form;
-    const searchQuery = search.searchQuery;
-    const { isTenBis, cuisine, minRating, maxDeliverInMin } = filters;
+
+    // Must declare variables
+    let searchQuery, isTenBis, cuisine, minRating, maxDeliverInMin;
+
+    if (search.values) {
+      searchQuery = search.values.searchQuery;
+    }
+
+    if (filters.values) {
+      // { isTenBis, cuisine, minRating, maxDeliverInMin } = filters.values;
+      isTenBis = filters.values.isTenBis;
+      cuisine = filters.values.cuisine;
+      minRating = filters.values.minRating;
+      maxDeliverInMin = filters.values.maxDeliverInMin;
+
+    }
 
     const urlFilters = {
       'ten_bis': (isTenBis) ? true : undefined,
@@ -27,6 +39,7 @@ export const loadRestaurants = () => {
       'search': searchQuery,
       'best': true,
     };
+    console.log(urlFilters);
     const queryParams = queryString.stringify(urlFilters);
 
     fetch(`${RESTAURANTS_URL}?${queryParams}`).then(response => response.json())

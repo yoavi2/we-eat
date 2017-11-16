@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import restaurantFilter from './restaurantFilter';
+import restaurantFilter from './restaurant';
 import { reducer as formReducer } from 'redux-form';
 
 const rootReducer = combineReducers({

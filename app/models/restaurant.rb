@@ -42,7 +42,7 @@ class Restaurant < ApplicationRecord
   }
 
   scope :search, ->(param) {
-    where('lower(name) like :param OR lower(address) like :param OR lower(cuisine) like :param',
+    where('lower(name) like lower(:param) OR lower(address) like lower(:param) OR lower(cuisine) like lower(:param)',
           param: "%#{param}%")
   }
 

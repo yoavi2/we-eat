@@ -1,6 +1,4 @@
 import React from 'react';
-// import {DebounceInput} from 'react-debounce-input';
-import { Field, reduxForm } from 'redux-form';
 
 class Map extends React.Component {
 
@@ -10,13 +8,8 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div className="map">
-        <form>
-          <label>
-            Search:
-
-          </label>
-        </form>
+      <div className="content-main map">
+        MAP!
       </div>
     );
   }

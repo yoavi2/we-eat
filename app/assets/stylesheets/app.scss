@@ -1,0 +1,65 @@
+.app {
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #eaebff;
+
+  .app-header {
+    display: flex;
+    flex-basis: 200px;
+    flex-flow: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("restaurants_bg.jpg");
+    background-size:cover;
+
+    .header-search {
+      padding: 4px;
+      font-size: 20px;
+      color: black;
+      flex-basis: auto;
+      background-color: #fff6fc;
+
+    }
+  }
+
+  .app-filters {
+    display: flex;
+    flex-basis: 80px;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff6fc;
+
+    .filter {
+      flex-basis: auto;
+      margin: 10px;
+    }
+
+  }
+
+  .app-content {
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .content-drawer {
+      flex-basis: 25%;
+
+    }
+
+    .content-main {
+      flex-basis: auto;
+
+    }
+
+
+
+  }
+
+
+
+}

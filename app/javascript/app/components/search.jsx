@@ -8,7 +8,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div className="forms">
+      <div className="header-search">
         <SearchForm debounceTimeout={300} />
       </div>
     );

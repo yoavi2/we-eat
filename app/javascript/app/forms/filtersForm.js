@@ -34,6 +34,16 @@ let FiltersForm = () => {
             />
           </div>
         </div>
+        <div>
+          <label>Only TenBis: </label>
+          <div>
+            <Field
+              name="isTenBis"
+              component="input"
+              type="checkbox">
+            </Field>
+          </div>
+        </div>
       </div>
     </div>
   );

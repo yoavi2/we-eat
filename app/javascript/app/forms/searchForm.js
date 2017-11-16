@@ -4,16 +4,18 @@ import {DebounceInput} from 'react-debounce-input';
 
 let SearchForm = (props) => {
 
-  const renderDebounceInput =(field) => {
+  const renderDebounceInput = (field) => {
     return (<DebounceInput debounceTimeout={props.debounceTimeout}
-                          onChange={field.input.onChange}/>);
+                           onChange={field.input.onChange}/>);
   };
 
   return (
     <div>
       <label> Search
-        <Field name="searchQuery"
-               component={renderDebounceInput} type="text"/>
+        <Field
+          name="searchQuery"
+          component={renderDebounceInput}
+          type="text"/>
       </label>
     </div>
   );

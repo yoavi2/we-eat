@@ -9,10 +9,11 @@ import Filters from './filters';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.props.actions.loadRestaurants();
-
   }
 
+  componentDidMount() {
+    this.props.actions.loadRestaurants();
+  }
 
   render() {
     return (

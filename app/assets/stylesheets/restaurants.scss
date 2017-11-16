@@ -3,9 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .restaurant-list {
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #eaebff;
 
   .restaurant-item {
+    display: flex;
+    flex-direction: row;
     background-color: #fff6fc;
     border-radius: 3px;
     height: 100px;
@@ -15,34 +21,92 @@
     text-align: center;
     border: 1px solid red;
 
-    .rating-container {
-      margin: 0 auto;
+    .restaurant-cuisine {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-basis: 25%;
+
+      .cuisine-icon {
+        background-color: #730E15;
+        height: 64px;
+        width: 64px;
+        margin: 0 auto;
+      }
+
+    }
+
+    .restaurant-info {
+      flex-basis: auto;
+      display: flex;
       width: 100%;
+      flex-flow: nowrap;
+      flex-direction: column;
+      justify-content: flex-start;
 
-      .rating-star {
-        height: 16px;
-        width: 16px;
-        background-size: contain;
-        float: left;
+      .restaurant-name {
+        margin-top:18px;
+        flex-basis: 24px;
+        font-size: 22px;
+        text-align: left;
+        padding-left: 20px;
+
+        .ten-bis-icon {
+          margin: 4px;
+          float:right;
+          height: 24px;
+          width: 24px;
+          background-size: contain;
+          background-image: url(10bisIcon.png);
+        }
+      }
+
+
+      .restaurant-rating {
+        flex-basis: 24px;
+        flex-grow: 1;
+        text-align: left;
+        padding-left: 20px;
+
+        .rating-container {
+          display: flex;
+          font-size: 18px;
+
+          .rating-star {
+            height: 16px;
+            width: 16px;
+            background-size: contain;
+            float: left;
+
+          }
+
+          .empty-star {
+            background-image: url('empty-star.png');
+          }
+
+          .full-star {
+            background-image: url('full-star.png');
+          }
+        }
 
       }
 
-      .empty-star {
-        background-image: url('empty-star.png');
+      .restaurant-deliver-time {
+        flex-basis: auto;
+        font-size: 16px;
+        color: #656565;
+        vertical-align: bottom;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 4px;
       }
 
-      .full-star {
-        background-image: url('full-star.png');
-      }
+
+
     }
 
-    .ten-bis-icon {
-      margin: 4px;
-      float:right;
-      height: 24px;
-      width: 24px;
-      background-size: contain;
-      background-image: url(10bisIcon.png);
-    }
+
+
+
   }
 }

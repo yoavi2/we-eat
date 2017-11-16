@@ -13,6 +13,7 @@ const Rating = ({ rating, maxRating }) => {
 
   return (
     <div className="rating-container">
+      Rating:
       {
         Array.from({ length: max }, (v, i) => {
           return (i >= roundedRating) ?

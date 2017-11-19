@@ -27,10 +27,20 @@
       flex-basis: 25%;
 
       .cuisine-icon {
-        background-color: #730E15;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         height: 64px;
         width: 64px;
         margin: 0 auto;
+
+
+        span {
+          font-size: 70px;
+          font-family: "ef_cuisinesregular";
+          color: red;
+
+        }
       }
 
 

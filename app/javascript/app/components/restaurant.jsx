@@ -11,7 +11,7 @@ const Restaurant = ({ restaurant }) => (
   >
     <div className="restaurant-cuisine">
       <div className="cuisine-icon">
-        <CuisineConverter cuisine={this.props.object.cuisine}/>
+        <CuisineConverter cuisine={restaurant.cuisine}/>
       </div>
     </div>
     <div className="restaurant-info">

@@ -1,8 +1,14 @@
 import React from 'react';
 
-export class CuisineConverter extends React.Component {
+const DEFAULT_ICON = 'F';
+
+export default class CuisineConverter extends React.Component {
 
   GetCuisineSign(cuisine) {
+
+    if (cuisine === null) {
+      return DEFAULT_ICON;
+    }
 
     if (cuisine.toLowerCase() == 'hamburger') {
       return 'A';
@@ -19,7 +25,7 @@ export class CuisineConverter extends React.Component {
     } else if (cuisine.toLowerCase() == 'chinese') {
       return 'I';
     } else {
-      return '';
+      return DEFAULT_ICON;
     }
   }
 
@@ -33,3 +39,4 @@ export class CuisineConverter extends React.Component {
 
   }
 }
+

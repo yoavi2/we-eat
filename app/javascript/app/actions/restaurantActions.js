@@ -39,7 +39,6 @@ export const loadRestaurants = () => {
       'search': searchQuery,
       'best': true,
     };
-    console.log(urlFilters);
     const queryParams = queryString.stringify(urlFilters);
 
     fetch(`${RESTAURANTS_URL}?${queryParams}`).then(response => response.json())

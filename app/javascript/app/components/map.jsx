@@ -6,9 +6,9 @@ const Map = compose(
   withProps({
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2O_IrxIOITwcdTGbv6cPC42qaHcImZ1Y&v=3.exp&libraries=geometry,drawing,places',
-    loadingElement: <div style={{ height: `600px`, width: '100%' }} />,
-    containerElement: <div className="content-main map" style={{ height: `600px`, width: '100%' }} />,
-    mapElement: <div style={{ height: `600px`, width: '100%' }} />,
+    loadingElement: <div style={{ height: '600px', width: '100%' }} />,
+    containerElement: <div className="content-main map" style={{ height: '600px', width: '100%' }} />,
+    mapElement: <div style={{ height: '600px', width: '100%' }} />,
   }),
   withScriptjs,
   withGoogleMap

@@ -9,7 +9,7 @@ class Restaurant < ApplicationRecord
   # Calculated fields
   def rating
     if reviews.present?
-      reviews.average(:rating)
+      (reviews.map(&:rating).sum / reviews.size)
     else
       nil
     end

@@ -5,9 +5,11 @@ import Map from './map';
 const Content = (props) => (
   <div className="app-content">
     <RestaurantList restaurants={props.restaurants}/>
-    <Map restaurants={props.restaurants}/>
+    <Map restaurants={props.restaurants}
+         isMarkerShown
+    />
   </div>
-)
+);
 
 export default Content;
 

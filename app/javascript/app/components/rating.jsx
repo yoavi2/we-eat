@@ -30,7 +30,7 @@ const Rating = ({ rating, maxRating }) => {
 };
 
 Rating.propTypes = {
-  rating: PropTypes.number,
+  // rating: PropTypes.number, TODO: For some reason server is sending these as strings
 };
 
 export default Rating;

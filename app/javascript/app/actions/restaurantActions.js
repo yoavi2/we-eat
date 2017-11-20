@@ -34,6 +34,7 @@ export const loadRestaurants = () => {
 
     const urlFilters = {
       'ten_bis': (isTenBis) ? true : undefined,
+      'cuisine': cuisine,
       'min_rating': minRating,
       'max_deliver_in_min': maxDeliverInMin,
       'search': searchQuery,

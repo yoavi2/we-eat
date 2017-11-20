@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.includes(:reviews).filter(
-        params.slice(:ten_bis, :max_deliver_in_min, :min_rating, :search, :best, :shortest))
+        params.slice(:ten_bis, :cuisine, :max_deliver_in_min, :min_rating, :search, :best, :shortest))
   end
 
   # GET /restaurants/1

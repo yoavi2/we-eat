@@ -9,9 +9,13 @@ let FiltersForm = () => {
         <label>Cuisine:
           <Field name="cuisine" component="select">
             <option/>
-            <option value="Fast food">Fast food</option>
-            <option value="Healthy">Healthy</option>
-            <option value="Chinese">Chinese</option>
+            <option value="hamburger">Hamburger</option>
+            <option value="cafe">Cafe</option>
+            <option value="dessert">Dessert</option>
+            <option value="italian">Italian</option>
+            <option value="fish">Fish</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="chinese">Chinese</option>
           </Field>
         </label>
       </div>

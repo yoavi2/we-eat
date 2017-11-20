@@ -29,6 +29,10 @@ class Restaurant < ApplicationRecord
     where(is_10_bis: is_10_bis)
   }
 
+  scope :cuisine, ->(cuisine) {
+    where('lower(cuisine) = ?', cuisine.downcase)
+  }
+
   scope :max_deliver_in_min, ->(max_deliver_in_min) {
     where('max_deliver_in_min <= ?', max_deliver_in_min)
   }

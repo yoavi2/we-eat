@@ -1,25 +1,35 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
-import {DebounceInput} from 'react-debounce-input';
+import DebouncedInput from '../components/debouncedInput';
 
-let SearchForm = (props) => {
+class SearchForm extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.onChange = this.onChange.bind(this);
+    // this.debouncedOnChange = debounce(this.onChange, 1000);
+  }
 
-  const renderDebounceInput = (field) => {
-    return (<DebounceInput debounceTimeout={props.debounceTimeout}
-                           onChange={field.input.onChange}/>);
+  renderDebounceInput = (field) => {
+    return (<DebouncedInput
+      debounceTimeout = {this.props.debounceTimeout}
+      onChange = {field.input.onChange}/>);
   };
 
-  return (
-    <div>
-      <label> Search:
-        <Field
-          name="searchQuery"
-          component={renderDebounceInput}
-          type="text"/>
-      </label>
-    </div>
-  );
-};
+
+  // onChange(event, newValue, previousValue) {
+  //
+  // }
+
+  render() {
+    return (
+      <div>
+        <label> Search:
+          <Field name="searchQuery" component={this.renderDebounceInput} type="text"/>
+        </label>
+      </div>
+    );
+  }
+}
 
 SearchForm = reduxForm({
   form: 'search',

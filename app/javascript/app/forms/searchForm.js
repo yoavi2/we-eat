@@ -1,12 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Field, reduxForm} from 'redux-form';
 import DebouncedInput from '../components/debouncedInput';
 
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.onChange = this.onChange.bind(this);
-    // this.debouncedOnChange = debounce(this.onChange, 1000);
   }
 
   renderDebounceInput = (field) => {
@@ -14,11 +13,6 @@ class SearchForm extends React.Component {
       debounceTimeout = {this.props.debounceTimeout}
       onChange = {field.input.onChange}/>);
   };
-
-
-  // onChange(event, newValue, previousValue) {
-  //
-  // }
 
   render() {
     return (
@@ -30,6 +24,10 @@ class SearchForm extends React.Component {
     );
   }
 }
+
+SearchForm.propTypes = {
+  debounceTimeout: PropTypes.number.isRequired,
+};
 
 SearchForm = reduxForm({
   form: 'search',

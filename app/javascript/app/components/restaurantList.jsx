@@ -10,21 +10,36 @@ class RestaurantList extends React.Component {
   }
 
   render() {
-    return (
-      <div className="content-drawer restaurant-list">
-        {this.props.restaurants.map(restaurant => (
-          <Restaurant
-            key={restaurant.id} restaurant={restaurant} />
-            // onClick={() => onRestaurantClick(restaurant.id)} /> // TODO: Implement a click later on
-        ))}
-      </div>
-    );
+    if (this.props.restaurants.length === 0) {
+      return <EmptyRestaurants/>;
+    }
+    return <ExistingRestaurants restaurants={this.props.restaurants}/>;
   }
+}
+
+function EmptyRestaurants() {
+  return (
+    <div className="content-drawer restaurant-message">
+      No matching restaurants
+    </div>
+  );
+}
+
+function ExistingRestaurants(props) {
+  return (
+    <div className="content-drawer restaurant-list">
+      {props.restaurants.map(restaurant => (
+        <Restaurant
+          key={restaurant.id} restaurant={restaurant}/>
+        // onClick={() => onRestaurantClick(restaurant.id)} /> // TODO: Implement a click later on
+      ))}
+    </div>
+  );
 }
 
 RestaurantList.propTypes = {
   restaurants: PropTypes.arrayOf(
-    restaurantPropType
+    restaurantPropType,
   ),
 };
 

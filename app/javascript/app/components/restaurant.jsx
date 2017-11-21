@@ -16,18 +16,17 @@ const Restaurant = ({ restaurant }) => (
     </div>
     <div className="restaurant-info">
       <div className="restaurant-name">
-         {restaurant.name}
+        {restaurant.name}
         <TenBisIcon isTenBis={restaurant.is_10_bis}/>
       </div>
       <div className="restaurant-rating">
-        <Rating rating={restaurant.rating} maxRating={3} />
+        <Rating rating={restaurant.rating} maxRating={3}/>
       </div>
+      {restaurant.max_deliver_in_min !== null &&
       <div className="restaurant-deliver-time">
-        { restaurant.max_deliver_in_min !== null &&
-        `Deliver in: ${restaurant.max_deliver_in_min}`
-        }
+        {`Deliver in: ${restaurant.max_deliver_in_min}`}
       </div>
-
+      }
     </div>
   </div>
 );

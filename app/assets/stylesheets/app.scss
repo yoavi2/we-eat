@@ -41,17 +41,19 @@
       flex-basis: auto;
       margin: 10px;
     }
-
   }
 
   .app-content {
     display: flex;
+    height: 100%;
+    flex-basis: auto;
     flex-flow: nowrap;
     flex-direction: row;
     justify-content: flex-start;
 
     .content-drawer {
-      flex-basis: 25%;
+      flex-basis: 33%;
+
 
     }
 
@@ -60,9 +62,9 @@
 
     }
 
-
-
   }
+
+
 
 
 

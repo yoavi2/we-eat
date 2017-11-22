@@ -16,7 +16,8 @@
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-form": "^7.1.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "css-ripple-effect": "^1.0.5"
   },
   "devDependencies": {
     "babel-plugin-react-import-extends": "^1.0.4",

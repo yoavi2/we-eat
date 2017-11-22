@@ -17,6 +17,7 @@
 @import 'restaurants.scss';
 @import 'map.scss';
 @import 'app.scss';
+@import 'css-ripple-effect/dist/ripple.css';
 
 @font-face {
     font-family: 'ef_cuisinesregular';

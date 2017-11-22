@@ -3,14 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .restaurant-list {
-  height: 100%;
   display: flex;
   flex-flow: nowrap;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-y: auto;
+  width: 100%;
 
   .restaurant-item {
     display: flex;
+    flex-shrink: 0;
     flex-direction: row;
     background-color: #fff6fc;
     height: 100px;
@@ -19,7 +21,6 @@
     margin: 8px;
     text-align: center;
     border: 1px solid red;
-
 
     .restaurant-cuisine {
       display: flex;

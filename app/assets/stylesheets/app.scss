@@ -3,6 +3,7 @@
   flex-flow: nowrap;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: stretch;
   background-color: #eaebff;
 
   .app-header {
@@ -44,22 +45,23 @@
   }
 
   .app-content {
+    flex-basis: 650px;
     display: flex;
-    height: 100%;
-    flex-basis: auto;
     flex-flow: nowrap;
     flex-direction: row;
     justify-content: flex-start;
+    overflow: hidden;
 
     .content-drawer {
-      flex-basis: 33%;
-
+      flex-basis: 340px;
+      flex-grow: 0;
+      flex-shrink: 0;
 
     }
 
     .content-main {
       flex-basis: auto;
-
+      flex-shrink: 1;
     }
 
   }

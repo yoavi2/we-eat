@@ -5,6 +5,8 @@
     "@rails/webpacker": "^3.0.2",
     "babel-preset-react": "^6.24.1",
     "coffeescript": "1.12.7",
+    "css-ripple-effect": "^1.0.5",
+    "history": "^4.7.2",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.0",
     "query-string": "^5.0.1",
@@ -12,12 +14,13 @@
     "react-dom": "^16.0.0",
     "react-google-maps": "^9.2.2",
     "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-form": "^7.1.2",
-    "redux-thunk": "^2.2.0",
-    "css-ripple-effect": "^1.0.5"
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-plugin-react-import-extends": "^1.0.4",

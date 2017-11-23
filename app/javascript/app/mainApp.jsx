@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import App from './components/app';
-import store from './store';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import { store, history } from './store';
+import { ConnectedRouter } from 'react-router-redux';
 
 class MainApp extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
@@ -19,15 +19,18 @@ class MainApp extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <App/>
+        <ConnectedRouter history={history}>
+          <div>
+            <App/>
+          </div>
+        </ConnectedRouter>
       </Provider>
     );
   }
 }
 
-
 ReactDOM.render(
-  <MainApp />,
+  <MainApp/>,
   document.body.appendChild(document.createElement('div')),
 );
 

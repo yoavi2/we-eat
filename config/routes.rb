@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :restaurants do
+
+  get '/restaurants/new', to: 'restaurants#index'
+  get 'new', to: 'restaurants#index'
+
+  resources :restaurants, except: :new do
     resources :reviews
   end
 

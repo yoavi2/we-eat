@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './search';
 import PlusButton from './plusButton';
-
+import { Route } from 'react-router-dom';
 
 class Header extends React.Component {
 
@@ -9,14 +9,18 @@ class Header extends React.Component {
     super(props);
   }
 
-  handleClick() {
-    console.log("Clicked!");
+  handleClick(history) {
+    console.log("clicked!");
+    history.push('/new');
   }
 
   render() {
     return (
       <div className="app-header">
-        <PlusButton onClick={() => this.handleClick()}/>
+        <Route
+          render={({ history }) => (
+            <PlusButton onClick={() => this.handleClick(history)}/>
+          )}/>
         <Search/>
         <div className="header-dummy">
         </div>

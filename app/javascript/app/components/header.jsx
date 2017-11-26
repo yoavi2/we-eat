@@ -1,7 +1,8 @@
 import React from 'react';
 import Search from './search';
 import PlusButton from './plusButton';
-import { Route } from 'react-router-dom';
+import {store} from '../store';
+import {push} from 'react-router-redux';
 
 class Header extends React.Component {
 
@@ -9,18 +10,15 @@ class Header extends React.Component {
     super(props);
   }
 
-  handleClick(history) {
-    console.log("clicked!");
-    history.push('/new');
+  handleClick() {
+    console.log('Clicked');
+    store.dispatch(push('/new'));
   }
 
   render() {
     return (
       <div className="app-header">
-        <Route
-          render={({ history }) => (
-            <PlusButton onClick={() => this.handleClick(history)}/>
-          )}/>
+        <PlusButton onClick={() => this.handleClick()}/>
         <Search/>
         <div className="header-dummy">
         </div>

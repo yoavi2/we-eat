@@ -11,9 +11,11 @@ class MainApp extends React.Component {
   }
 
   componentDidMount() {
+    console.log('MainApp - mount');
   }
 
   componentWillUnmount() {
+    console.log('MainApp - unmount');
   }
 
   render() {

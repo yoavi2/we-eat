@@ -6,9 +6,11 @@ const loadDataMiddleware = store => next => action => {
   // TODO: Receive a function to dispatch
   next(action);
 
-  if(action.type === '@@redux-form/CHANGE') {
+  if (action.type === '@@redux-form/CHANGE' &&
+        (action.meta.form === 'search' ||
+          action.meta.form === 'filters')) {
     store.dispatch(loadRestaurants());
   }
-}
+};
 
 export default loadDataMiddleware;

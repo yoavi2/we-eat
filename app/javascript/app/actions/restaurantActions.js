@@ -47,3 +47,11 @@ export const loadRestaurants = () => {
   };
 };
 
+export const createRestaurant = (values) => {
+  return (dispatch, getState) => {
+    console.log('values dispatched!');
+    console.log(values);
+  };
+};
+
+

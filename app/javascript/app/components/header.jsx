@@ -10,7 +10,7 @@ class Header extends React.Component {
     super(props);
   }
 
-  handleClick() {
+  handleClick = () => {
     console.log('Clicked');
     store.dispatch(push('/new'));
   }
@@ -18,7 +18,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className="app-header">
-        <PlusButton onClick={() => this.handleClick()}/>
+        <PlusButton onClick={this.handleClick}/>
         <Search/>
         <div className="header-dummy">
         </div>

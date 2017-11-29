@@ -1,7 +1,7 @@
 class Restaurant < ApplicationRecord
   include RestaurantFilterable
 
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
   # Validations
   validates :name, :address, presence: true
